@@ -21,3 +21,7 @@ func _process(delta):
 		
 	position += velocity * delta
 	
+
+
+func _on_body_entered(body):
+	hide()
