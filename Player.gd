@@ -21,7 +21,11 @@ func _process(delta):
 		
 	position += velocity * delta
 	
+@onready var bgmusic = $"../bgmusic"
+@onready var enemyhit = $"../enemyhit"
 
 
 func _on_body_entered(body):
 	hide()
+	enemyhit.play()
+	bgmusic.stop()
